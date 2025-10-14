@@ -14,7 +14,7 @@ const corsOptions = {
   origin: [
     'http://localhost:3000',
     'http://localhost:5173',
-    'https://dalit-film-circle.vercel.app' // 🔥 Apna Vercel URL yahaan
+    'https://owner-avatar-dalit-film-circle-frontend-mqdp-b24ls2hgt.vercel.app' // 🔥 Apna Vercel URL yahaan
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
