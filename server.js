@@ -9,8 +9,19 @@ const app = express();
 // Connect Database
 connectDB();
 
-// Middleware
-app.use(cors());
+// ✅ UPDATED CORS - YE NAYA CODE HAI
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://dalit-film-circle.vercel.app' // 🔥 Apna Vercel URL yahaan
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
